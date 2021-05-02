@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from datetime import datetime
 import time
 import singer
@@ -142,8 +143,9 @@ def get_target_key(message, prefix=None, timestamp=None, naming_convention=None)
     # todo: replace dynamic tokens such as {date(<format>)} with the date formatted as requested in <format>
 
     if prefix:
-        filename = key.split('/')[-1]
-        key = key.replace(filename, f'{prefix}{filename}')
+        # filename = key.split('/')[-1]
+        # key = key.replace(filename, f'{prefix}{filename}')
+        key = os.path.join(prefix, key)
     return key
 
 # This function is borrowed direclty from https://github.com/datadudes/json2hive/blob/master/json2hive/generators.py
