@@ -3,10 +3,11 @@
 from datetime import datetime
 import time
 import singer
-import json
+# import json
 import re
 import collections
 import inflection
+import simplejson as json
 
 from decimal import Decimal
 from datetime import datetime
