@@ -23,6 +23,8 @@ installation instructions for [Mac](http://docs.python-guide.org/en/latest/start
 
 It's recommended to use a virtualenv:
 
+<!--For Installation on MacOS-->
+
 ```bash
   python3 -m venv venv
   pip install target-athena
@@ -30,6 +32,7 @@ It's recommended to use a virtualenv:
 
 or
 
+<--For install on Ubuntu-->
 ```bash
   python3 -m venv venv
   . venv/bin/activate
