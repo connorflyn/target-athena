@@ -34,13 +34,7 @@ It's recommended to use a virtualenv:
 ```bash
   pip3 install target-athena
 ```
-<!--For Installation on MacOS-->
 
-```bash
-  python3 -m venv venv
-  source .venv/bin/activate
-  pip install target-athena
-```
 
 ### To run
 
