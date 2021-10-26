@@ -23,28 +23,32 @@ installation instructions for [Mac](http://docs.python-guide.org/en/latest/start
 
 It's recommended to use a virtualenv:
 
+<!--Creating and activating virtual enviroment-->
+
+```bash
+  python3 -m venv .athenavenv
+  source .venv/bin/activate
+```
+<!--Installation of target-athena on MacOS-->
+
+```bash
+  pip3 install target-athena
+```
 <!--For Installation on MacOS-->
 
 ```bash
   python3 -m venv venv
+  source .venv/bin/activate
   pip install target-athena
-```
-
-or
-
-<--For install on Ubuntu-->
-```bash
-  python3 -m venv venv
-  . venv/bin/activate
-  pip install --upgrade pip
-  pip install .
 ```
 
 ### To run
 
 Like any other target that's following the singer specificiation:
 
-`some-singer-tap | target-athena --config [config.json]`
+```bash
+  tap-klaviyo | target-athena --config [config.json]
+```
 
 It's reading incoming messages from STDIN and using the properites in `config.json` to upload data into Postgres.
 
